@@ -1,0 +1,424 @@
+{
+  "hypothesis": "H2",
+  "dataset": {
+    "cohort_metadata": {
+      "requested_cutoff": "2026-05-06",
+      "requested_counts": {
+        "early": 31,
+        "late": 25
+      },
+      "resolved_counts": {
+        "early": 31,
+        "late": 25
+      },
+      "notes": []
+    },
+    "first_survey_per_user": true,
+    "skipped_rows": [],
+    "n_users": 56,
+    "n_survey_runs": 56,
+    "n_rows": 392,
+    "trust_row_count": 392
+  },
+  "models": {
+    "early": {
+      "full_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -95.40608205973082,
+        "aic": 202.81216411946164,
+        "bic": 223.0915482407044,
+        "n_parameters": 6,
+        "n_users": 31,
+        "n_observations": 217,
+        "thresholds_raw": [
+          1.8663451192415432,
+          11.21495907300929
+        ],
+        "sd_user_intercept": 4.381496107566803,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 3.383431514135689,
+            "se": 0.6945182595654874,
+            "z": 4.87162355710053,
+            "p_value": 1.1068490912657939e-06,
+            "odds_ratio": 29.47173045217126,
+            "ci95_low": 7.554744113934673,
+            "ci95_high": 114.97184851613217
+          },
+          "mean_post_trust": {
+            "beta": 2.0252081652441976,
+            "se": 0.5757557838927592,
+            "z": 3.5174777603648266,
+            "p_value": 0.0004356688565379883,
+            "odds_ratio": 7.577688191780027,
+            "ci95_low": 2.4515655704247856,
+            "ci95_high": 23.422322055980327
+          },
+          "task_order": {
+            "beta": 0.25111129005980315,
+            "se": 0.1320959165644749,
+            "z": 1.9009769309351654,
+            "p_value": 0.05730503432455733,
+            "odds_ratio": 1.2854531345272309,
+            "ci95_low": 0.9922336090707056,
+            "ci95_high": 1.665323312937826
+          }
+        },
+        "optimizer_iterations": 31,
+        "optimizer_function_evals": 280
+      },
+      "null_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -107.99081493538645,
+        "aic": 227.9816298707729,
+        "bic": 248.26101399201565,
+        "n_parameters": 6,
+        "n_users": 31,
+        "n_observations": 217,
+        "thresholds_raw": [
+          5.20012196050155,
+          12.925110797863118
+        ],
+        "sd_user_intercept": 3.5531796708122902,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 0.0,
+            "se": 0.4473447469796923,
+            "z": 0.0,
+            "p_value": 1.0,
+            "odds_ratio": 1.0,
+            "ci95_low": 0.41611413054364543,
+            "ci95_high": 2.4031868340868847
+          },
+          "mean_post_trust": {
+            "beta": 2.6287419256113376,
+            "se": 0.4601590595162633,
+            "z": 5.71268102028627,
+            "p_value": 1.1121001654155552e-08,
+            "odds_ratio": 13.856326642301758,
+            "ci95_low": 5.622802296824236,
+            "ci95_high": 34.14628113931767
+          },
+          "task_order": {
+            "beta": 0.18785290431678556,
+            "se": 0.10661646039684078,
+            "z": 1.761950299396283,
+            "p_value": 0.078077695094257,
+            "odds_ratio": 1.2066560084047115,
+            "ci95_low": 0.9791060102836096,
+            "ci95_high": 1.487089965056428
+          }
+        },
+        "optimizer_iterations": 31,
+        "optimizer_function_evals": 252
+      },
+      "lr_tests": {
+        "primary": {
+          "hypothesis_label": "post_trust_within = 0",
+          "full_log_likelihood": -95.40608205973082,
+          "restricted_log_likelihood": -107.99081493538645,
+          "log_likelihood_gap": 12.584732875655632,
+          "lr_statistic": 25.169465751311265,
+          "df": 1,
+          "p_value": 5.250697720241243e-07,
+          "warning": null,
+          "predictor": "post_trust_within"
+        }
+      }
+    },
+    "late": {
+      "full_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -85.03097718107908,
+        "aic": 182.06195436215816,
+        "bic": 201.05067020569925,
+        "n_parameters": 6,
+        "n_users": 25,
+        "n_observations": 175,
+        "thresholds_raw": [
+          6.983338227176572,
+          14.635552170706289
+        ],
+        "sd_user_intercept": 5.088363685055028,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 2.367304367222771,
+            "se": 0.4362654668341744,
+            "z": 5.426293271391544,
+            "p_value": 5.753639400591469e-08,
+            "odds_ratio": 10.668594873898439,
+            "ci95_low": 4.536809683855794,
+            "ci95_high": 25.08787551490111
+          },
+          "mean_post_trust": {
+            "beta": 3.988376836197094,
+            "se": 0.645109445534688,
+            "z": 6.182480916693749,
+            "p_value": 6.310194131182051e-10,
+            "odds_ratio": 53.96722059317724,
+            "ci95_low": 15.240590907260282,
+            "ci95_high": 191.09894860869358
+          },
+          "task_order": {
+            "beta": 0.1849533672057336,
+            "se": 0.12629191105841472,
+            "z": 1.464491000695886,
+            "p_value": 0.143059840170378,
+            "odds_ratio": 1.203162331997969,
+            "ci95_low": 0.9393390602057993,
+            "ci95_high": 1.5410831492748074
+          }
+        },
+        "optimizer_iterations": 30,
+        "optimizer_function_evals": 322
+      },
+      "null_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -106.6656473895123,
+        "aic": 225.3312947790246,
+        "bic": 244.3200106225657,
+        "n_parameters": 6,
+        "n_users": 25,
+        "n_observations": 175,
+        "thresholds_raw": [
+          5.446223358051389,
+          11.168723299496225
+        ],
+        "sd_user_intercept": 3.8926461467885622,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 0.0,
+            "se": 0.29950305169659186,
+            "z": 0.0,
+            "p_value": 1.0,
+            "odds_ratio": 1.0,
+            "ci95_low": 0.5559783183166251,
+            "ci95_high": 1.798631290205292
+          },
+          "mean_post_trust": {
+            "beta": 3.0537399731268144,
+            "se": 0.5028729781786114,
+            "z": 6.072587125654186,
+            "p_value": 1.2586576874575137e-09,
+            "odds_ratio": 21.194463101889617,
+            "ci95_low": 7.909850930471522,
+            "ci95_high": 56.79061086307764
+          },
+          "task_order": {
+            "beta": 0.1454654078163979,
+            "se": 0.10422890288123685,
+            "z": 1.3956340688162843,
+            "p_value": 0.16282471768255424,
+            "odds_ratio": 1.1565777253411644,
+            "ci95_low": 0.9428734150072574,
+            "ci95_high": 1.4187185824356345
+          }
+        },
+        "optimizer_iterations": 27,
+        "optimizer_function_evals": 186
+      },
+      "lr_tests": {
+        "primary": {
+          "hypothesis_label": "post_trust_within = 0",
+          "full_log_likelihood": -85.03097718107908,
+          "restricted_log_likelihood": -106.6656473895123,
+          "log_likelihood_gap": 21.63467020843322,
+          "lr_statistic": 43.26934041686644,
+          "df": 1,
+          "p_value": 4.769994674924978e-11,
+          "warning": null,
+          "predictor": "post_trust_within"
+        }
+      }
+    },
+    "pooled": {
+      "full_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -174.37099908167013,
+        "aic": 366.74199816334027,
+        "bic": 402.4833547214544,
+        "n_parameters": 9,
+        "n_users": 56,
+        "n_observations": 392,
+        "thresholds_raw": [
+          11.456114573056139,
+          19.91496173216308
+        ],
+        "sd_user_intercept": 4.372270928941476,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 2.708587874710828,
+            "se": 0.3640652163759278,
+            "z": 7.439842514133468,
+            "p_value": 1.0080540342128082e-13,
+            "odds_ratio": 15.008067272714733,
+            "ci95_low": 7.352350445553728,
+            "ci95_high": 30.63538455223449
+          },
+          "mean_post_trust": {
+            "beta": 4.3921108235293636,
+            "se": 0.48143875213859694,
+            "z": 9.12288594139792,
+            "p_value": 7.314994063467083e-20,
+            "odds_ratio": 80.81081645050504,
+            "ci95_low": 31.452889953486626,
+            "ci95_high": 207.62442068294925
+          },
+          "cohort": {
+            "beta": 0.7981276962082066,
+            "se": 0.5840592229584224,
+            "z": 1.3665184365473553,
+            "p_value": 0.17177629817808215,
+            "odds_ratio": 2.2213779381806535,
+            "ci95_low": 0.7070680395064973,
+            "ci95_high": 6.9788473930738135
+          },
+          "graph": {
+            "beta": 4.394357387713203,
+            "se": 0.6456611986659465,
+            "z": 6.805980283146556,
+            "p_value": 1.0036345823089539e-11,
+            "odds_ratio": 80.99256721734906,
+            "ci95_low": 22.847950926450544,
+            "ci95_high": 287.10653159109694
+          },
+          "ai_error_exposed": {
+            "beta": -1.7619832721831628,
+            "se": 0.6451644941321032,
+            "z": -2.7310605096975173,
+            "p_value": 0.0063130879422768306,
+            "odds_ratio": 0.17170399016472832,
+            "ci95_low": 0.04848476371103942,
+            "ci95_high": 0.6080726806094827
+          },
+          "task_order": {
+            "beta": 0.19645301489104908,
+            "se": 0.08875904103056327,
+            "z": 2.2133296237777342,
+            "p_value": 0.026874928698334348,
+            "odds_ratio": 1.2170781349859878,
+            "ci95_low": 1.0227399941213657,
+            "ci95_high": 1.448343855892264
+          }
+        },
+        "optimizer_iterations": 70,
+        "optimizer_function_evals": 1060
+      },
+      "null_model": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "log_likelihood": -211.86058991909738,
+        "aic": 441.72117983819476,
+        "bic": 477.4625363963089,
+        "n_parameters": 9,
+        "n_users": 56,
+        "n_observations": 392,
+        "thresholds_raw": [
+          9.193687194318237,
+          15.85864740027258
+        ],
+        "sd_user_intercept": 2.7625591681303105,
+        "coefficients": {
+          "post_trust_within": {
+            "beta": 0.0,
+            "se": 0.25488974126237635,
+            "z": 0.0,
+            "p_value": 1.0,
+            "odds_ratio": 1.0,
+            "ci95_low": 0.606783093958323,
+            "ci95_high": 1.6480353687452691
+          },
+          "mean_post_trust": {
+            "beta": 3.46460521871232,
+            "se": 0.4125737582502619,
+            "z": 8.397541407882601,
+            "p_value": 4.5592379394075484e-17,
+            "odds_ratio": 31.96383855663982,
+            "ci95_low": 14.23865789423563,
+            "ci95_high": 71.75444363253882
+          },
+          "cohort": {
+            "beta": 1.420477128527194,
+            "se": 0.605713440082052,
+            "z": 2.3451306088482555,
+            "p_value": 0.019020415398704096,
+            "odds_ratio": 4.1390948494198865,
+            "ci95_low": 1.2627334626296287,
+            "ci95_high": 13.567476177289874
+          },
+          "graph": {
+            "beta": 2.6784484364357164,
+            "se": 0.6864247202766927,
+            "z": 3.9020279388482018,
+            "p_value": 9.539014411852346e-05,
+            "odds_ratio": 14.56248114317363,
+            "ci95_low": 3.792615871947506,
+            "ci95_high": 55.9154589353105
+          },
+          "ai_error_exposed": {
+            "beta": -2.3786376224540193,
+            "se": 0.7825269750551628,
+            "z": -3.0396877018665607,
+            "p_value": 0.0023682357863586776,
+            "odds_ratio": 0.09267675226832368,
+            "ci95_low": 0.01999265158763003,
+            "ci95_high": 0.4296068669709857
+          },
+          "task_order": {
+            "beta": 0.17053544730564585,
+            "se": 0.07501029406189288,
+            "z": 2.2734939175806024,
+            "p_value": 0.02299643224955448,
+            "odds_ratio": 1.1859396895554177,
+            "ci95_low": 1.0237939349274463,
+            "ci95_high": 1.3737656566235394
+          }
+        },
+        "optimizer_iterations": 67,
+        "optimizer_function_evals": 738
+      },
+      "lr_tests": {
+        "primary": {
+          "hypothesis_label": "post_trust_within = 0",
+          "full_log_likelihood": -174.37099908167013,
+          "restricted_log_likelihood": -211.86058991909738,
+          "log_likelihood_gap": 37.489590837427244,
+          "lr_statistic": 74.97918167485449,
+          "df": 1,
+          "p_value": 4.757037611925544e-18,
+          "warning": null,
+          "predictor": "post_trust_within"
+        },
+        "drop_graph_and_ai_error": {
+          "hypothesis_label": "drop_graph_and_ai_error",
+          "full_log_likelihood": -174.37099908167013,
+          "restricted_log_likelihood": -181.77049946831679,
+          "log_likelihood_gap": 7.39950038664665,
+          "lr_statistic": 14.7990007732933,
+          "df": 2,
+          "p_value": 0.0006115582274724825,
+          "warning": null
+        },
+        "drop_cohort_graph_ai_error": {
+          "hypothesis_label": "drop_cohort_graph_ai_error",
+          "full_log_likelihood": -174.37099908167013,
+          "restricted_log_likelihood": -184.3590304142359,
+          "log_likelihood_gap": 9.988031332565754,
+          "lr_statistic": 19.976062665131508,
+          "df": 3,
+          "p_value": 0.00017169240291487912,
+          "warning": null
+        }
+      }
+    }
+  },
+  "equations": {
+    "early_late": "logit(P(Delegation_it <= k)) = alpha_k - (beta_W * PostTrustWithin_it + beta_B * MeanPostTrust_i + beta_T * TaskOrder_t + u_0i)",
+    "pooled": "logit(P(Delegation_it <= k)) = alpha_k - (beta_W * PostTrustWithin_it + beta_B * MeanPostTrust_i + beta_C * Cohort_i + beta_G * Graph_i + beta_E * AIErrorExposed_i + beta_T * TaskOrder_t + u_0i)"
+  }
+}

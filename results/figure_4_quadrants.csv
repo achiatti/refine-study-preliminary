@@ -1,0 +1,5 @@
+trust,delegation,trials
+low,low,172
+low,high,3
+high,low,172
+high,high,45

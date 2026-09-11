@@ -1,0 +1,7 @@
+Trials: 392
+Participants: 56
+Reject AI assistance: 114 (29.1%)
+Use with verification: 230 (58.7%)
+Fully delegate: 48 (12.2%)
+High trust with retained control: 172 (79.3% of high-trust trials)
+Low trust with full delegation: 3

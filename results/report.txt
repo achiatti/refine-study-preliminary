@@ -1,0 +1,66 @@
+H2: Trust Predicts Delegation
+=============================
+
+Hypothesis:
+H2: Trust predicts delegation choices within individuals.
+
+Coding choices:
+- First survey per user only, so the analysis uses n=56 users.
+- Delegation ordering: never < verify (stored in the webapp as oversee) < totally.
+- Graph_i = 1 for A/C and 0 for B/D.
+- AIErrorExposed_i = 1 only for late-cohort A/B users; 0 otherwise.
+- Cohort_i = 0 for the early cohort and 1 for the late cohort.
+
+Model equations:
+- Early and late cohorts separately: logit(P(Delegation_it <= k)) = alpha_k - (beta_W * PostTrustWithin_it + beta_B * MeanPostTrust_i + beta_T * TaskOrder_t + u_0i)
+- Pooled n=56 model: logit(P(Delegation_it <= k)) = alpha_k - (beta_W * PostTrustWithin_it + beta_B * MeanPostTrust_i + beta_C * Cohort_i + beta_G * Graph_i + beta_E * AIErrorExposed_i + beta_T * TaskOrder_t + u_0i)
+
+Early cohort
+------------
+- Users: 31
+- Task observations: 217
+- Log-likelihood: -95.406082
+- AIC: 202.812164
+- BIC: 223.091548
+- Thresholds: 1.866345, 11.214959
+- sd(user intercept): 4.381496
+Fixed effects:
+- post_trust_within: beta=3.383432, SE=0.6945182595654874, z=4.87162355710053, p=1.1068490912657939e-06, OR=29.471730
+- mean_post_trust: beta=2.025208, SE=0.5757557838927592, z=3.5174777603648266, p=0.0004356688565379883, OR=7.577688
+- task_order: beta=0.251111, SE=0.1320959165644749, z=1.9009769309351654, p=0.05730503432455733, OR=1.285453
+- LR test for post_trust_within = 0: statistic=25.169466, df=1, p=5.2507e-07
+
+Late cohort
+-----------
+- Users: 25
+- Task observations: 175
+- Log-likelihood: -85.030977
+- AIC: 182.061954
+- BIC: 201.050670
+- Thresholds: 6.983338, 14.635552
+- sd(user intercept): 5.088364
+Fixed effects:
+- post_trust_within: beta=2.367304, SE=0.4362654668341744, z=5.426293271391544, p=5.753639400591469e-08, OR=10.668595
+- mean_post_trust: beta=3.988377, SE=0.645109445534688, z=6.182480916693749, p=6.310194131182051e-10, OR=53.967221
+- task_order: beta=0.184953, SE=0.12629191105841472, z=1.464491000695886, p=0.143059840170378, OR=1.203162
+- LR test for post_trust_within = 0: statistic=43.269340, df=1, p=4.76999e-11
+
+Pooled sample
+-------------
+- Users: 56
+- Task observations: 392
+- Log-likelihood: -174.370999
+- AIC: 366.741998
+- BIC: 402.483355
+- Thresholds: 11.456115, 19.914962
+- sd(user intercept): 4.372271
+Fixed effects:
+- post_trust_within: beta=2.708588, SE=0.3640652163759278, z=7.439842514133468, p=1.0080540342128082e-13, OR=15.008067
+- mean_post_trust: beta=4.392111, SE=0.48143875213859694, z=9.12288594139792, p=7.314994063467083e-20, OR=80.810816
+- cohort: beta=0.798128, SE=0.5840592229584224, z=1.3665184365473553, p=0.17177629817808215, OR=2.221378
+- graph: beta=4.394357, SE=0.6456611986659465, z=6.805980283146556, p=1.0036345823089539e-11, OR=80.992567
+- ai_error_exposed: beta=-1.761983, SE=0.6451644941321032, z=-2.7310605096975173, p=0.0063130879422768306, OR=0.171704
+- task_order: beta=0.196453, SE=0.08875904103056327, z=2.2133296237777342, p=0.026874928698334348, OR=1.217078
+- LR test for post_trust_within = 0: statistic=74.979182, df=1, p=4.75704e-18
+- LR test drop_graph_and_ai_error: statistic=14.799001, df=2, p=0.000611558
+- LR test drop_cohort_graph_ai_error: statistic=19.976063, df=3, p=0.000171692
