@@ -1,13 +1,27 @@
-# AIxIA 2026 workshop-paper reproduction package
+# ReFiNe project: preliminary analyses
 
-This compact package reproduces the empirical results reported in
-`AIxIA_2026_XAI_it_workshop_version.pdf`: the pooled cumulative-logit
-random-intercept model in Table 2 and the numerical contents of Figures 3 and
-4. It intentionally excludes unrelated analyses, manuscripts, presentations,
-raw exports, consent material, participant lists, dependencies, and web-app
-data.
+This codebase reproduces the empirical results reported in
+the paper "Following Delegation Traces to Study Human Oversight in Interaction with Multimodal AI", accepted at the 6th Workshop on Explainable AI, Generative and Agentic Systems: Trust, Transparency, and Human Oversight, @ AIxIA 2026.
 
-## Run
+The anonymised data collected in our preliminary (N=56) user study can be found on Zenodo: https://zenodo.org/records/21790700
+You may download them and copy them under a ```./data``` sub-folder following the main file tree of this repo.
+
+## Citation
+
+If you use this code or the associated dataset, please cite our paper:
+
+```bibtex
+@inproceedings{chiatti2026delegationtraces,
+  author    = {Chiatti, Agnese and Matteucci, Matteo and Schiaffonati, Viola},
+  title     = {Following Delegation Traces to Study Human Oversight in Interaction with Multimodal {AI}},
+  booktitle = {Proceedings of the 6th Workshop on Explainable AI, Generative and Agentic Systems: Trust, Transparency, and Human Oversight},
+  year      = {2026},
+  publisher = {CEUR-WS.org},
+  note      = {Accepted for publication}
+}
+``` 
+
+## How to install requirements and run this code
 
 ```bash
 python3 -m pip install -r requirements.txt
@@ -21,8 +35,3 @@ Results are written to `results/`:
   the figures' data.
 - `paper_descriptives.txt` reports the counts quoted in Section 4.1.
 
-## Privacy
-
-`data/` is copied solely from `../zenodo_data_and_analyses/anonymised-study-data`.
-It uses release-local `anon_*` participant labels only. No real-person
-identifiers or original raw-study exports are included.
